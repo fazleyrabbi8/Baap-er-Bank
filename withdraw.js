@@ -25,18 +25,22 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
 
     // 5. get the previous balance total
     const totalbalance = document.getElementById('Total-balance');
-
+    const totalBalanceamount = parseFloat(totalbalance.innerText);
 
     // 6. calculate new balance total
+    const Newbalance = totalBalanceamount - newwithdrawamount;
+
     // 6-5: set the new balance total
+    totalbalance.innerText = Newbalance;
+
+
+
+
+
 
     // 7. clear the input field
 
     withdrawfield.value = '';
-
-
-
-
 
 
 
