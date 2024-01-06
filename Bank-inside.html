@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Inside</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Header Text  -->
+    <header class="my-10">
+        <h1 class="text-5xl text-center mt-11"> Let's Get some <span
+                class="font-semibold text-violet-600">Money</span>!!! </h1>
+
+    </header>
+
+    <main>
+
+        <!--  Amount section -->
+
+        <section class="my-12">
+
+            <div class="grid grid-cols-3 w-9/12 mx-auto gap-4  text-white">
+
+                <div class="bg-green-500    p-8 rounded-xl">
+                    <h3 class="text-2xl "> Deposit</h3>
+
+                    <h2  class="text-4xl"> 
+                        $<span id="Total-Deposit">00</span>
+                    </h2>
+                </div>
+                <div class="bg-yellow-500  p-8 rounded-xl">
+                    <h3  class="text-2xl "> Withdraw</h3>
+
+                    <h2  class="text-4xl">
+                        $<span id="Total-Withdraw">00</span>
+                    </h2>
+                </div>
+                <div class="bg-violet-500   p-8 rounded-xl">
+                    <h3 class="text-2xl "> Balance</h3>
+
+                    <h2 class="text-4xl">
+                        $<span id="Total-balance">1250</span>
+                    </h2>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <!-- Deposit and withdraw  -->
+
+        <section class="my-12">
+
+            <div class="grid grid-cols-2 mx-auto w-9/12 gap-4 text-white">
+
+                <div class="bg-rose-500	   p-5 rounded-xl">
+                    <h3 class="text-3xl "> Please Deposit</h3> <br>
+                    <input class="w-3/4  h-10 form-input text-black rounded-xl border-none  " name="Money" id="New-Deposit"
+                        placeholder="$ Amount you want to Deposit  "> <br>
+
+                    <button id="btn-deposit" class="btn  btn-primary hover:bg--500 mt-3 "> Deposit </button>
+
+
+                </div>
+
+
+                <div class="bg-fuchsia-400	  p-5  rounded-xl">
+                    <h3 class="text-3xl "> Please Withdraw</h3> <br>
+                    <input class="w-3/4  h-10 form-input text-black rounded-xl border-none  " name="Money" id="New-Withdraw-Amount"
+                        placeholder="$ Amount you want to Withdraw  "> <br>
+
+                    <button id="btn-withdraw" class="btn  btn-primary hover:bg--500 mt-3 "> Withdraw </button>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+    </main>
+
+</body>
+
+<script src="dom.js"></script>
+
+<script src="withdraw.js"></script>
+<script src="deposit.js"></script>
+</html>
