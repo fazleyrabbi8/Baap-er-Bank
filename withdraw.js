@@ -12,6 +12,19 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     const newwithdrawamount = parseFloat(withdrawfield.value);
 
 
+      // 7. clear the input field
+
+      withdrawfield.value = '';
+
+    // check if it is a number 
+
+    if( isNaN(newwithdrawamount)) {
+
+        alert('We Only use numbers');
+        return ;
+    }
+
+
     // 3. Get previous withdraw total
 
 
@@ -19,13 +32,24 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     const oldwithdrawamount = parseFloat(oldwithdraw.innerText);
 
     // 4. calculate total withdraw amount 
-    // 4-5. set total withdraw amount
-    const totalWithdrawAmount = newwithdrawamount + oldwithdrawamount;
-    oldwithdraw.innerText = totalWithdrawAmount;
 
     // 5. get the previous balance total
     const totalbalance = document.getElementById('Total-balance');
     const totalBalanceamount = parseFloat(totalbalance.innerText);
+
+  
+
+
+
+    if (newwithdrawamount > totalBalanceamount) {
+        alert('You dont have that money ')
+        return;
+
+    }
+
+    // 4-5. set total withdraw amount
+    const totalWithdrawAmount = newwithdrawamount + oldwithdrawamount;
+    oldwithdraw.innerText = totalWithdrawAmount;
 
     // 6. calculate new balance total
     const Newbalance = totalBalanceamount - newwithdrawamount;
@@ -38,9 +62,6 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
 
 
 
-    // 7. clear the input field
-
-    withdrawfield.value = '';
 
 
 
